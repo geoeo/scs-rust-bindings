@@ -111,7 +111,6 @@ mod tests {
             (*p_matrix_ref).m = n;
             (*p_matrix_ref).n = n;
 
-
             /* Cone */
             (*k_ref).z = 1;
             (*k_ref).l = 2;
@@ -160,8 +159,6 @@ mod tests {
                 let v =  ((*sol_ref).y).add(i as usize);
                 println!("y[{}] = {}", i, *v);
             }
-
-  
 
             dealloc(p_matrix,p_matrix_layout);
             dealloc(a_matrix,a_matrix_layout);
