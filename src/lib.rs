@@ -22,4 +22,9 @@ mod tests {
         assert_eq!(SCS_SOLVED,1);
         assert_eq!(SCS_SOLVED_INACCURATE,2);
     }
+
+    #[test]
+    fn ScsMatrixStruct() {
+        assert_eq!(40,mem::size_of::<ScsMatrix>());
+    }
 }
