@@ -29,13 +29,16 @@ mod tests {
         assert_eq!(40,mem::size_of::<ScsMatrix>());
     }
 
-    unsafe fn basic_qp() {
-        let k_layout = Layout::new::<ScsCone>();
-        let k = alloc(k_layout);
-        let k_ref = k as *mut ScsCone;
-        (*k_ref).z = 1i64;
-        assert_eq!(1,(*k_ref).z);
-        dealloc(k,k_layout);   
+    #[test]
+    fn basic_qp() {
+        unsafe {
+            let k_layout = Layout::new::<ScsCone>();
+            let k = alloc(k_layout);
+            let k_ref = k as *mut ScsCone;
+            (*k_ref).z = 1i64;
+            assert_eq!(1,(*k_ref).z);
+            dealloc(k,k_layout);
+        }
     }
 
 }
