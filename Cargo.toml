@@ -2,10 +2,15 @@
 name = "scs-rust-bindings"
 version = "0.1.0"
 edition = "2021"
+authors = [ "Marc Haubenstock <marc.dhaubenstock@gmail.com>" ]
+
+description = "Rust bindings for the SCS project: https://www.cvxgrp.org/scs/"
+repository = "https://github.com/geoeo/scs-rust-bindings"
+readme = "README.md"
+categories = [ "science", "mathematics" ]
+keywords = [ "algebra", "math","optimization","convex", "conic" ]
+license = "BSD-3-Clause"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-
 [build-dependencies]
 bindgen = "*"
